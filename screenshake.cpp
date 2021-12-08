@@ -22,7 +22,6 @@ DWORD WINAPI screenshaker(LPVOID)
         SeedXorshift32(__rdtsc());
         int y = xorshift32() & sh;
         int number = xorshift32() % 9;
-        SelectObject(desk, CreateSolidBrush(RGB(xorshift32() % 255, xorshift32() % 255, xorshift32() % 255)));
         switch (number)
         {
         case 1:
