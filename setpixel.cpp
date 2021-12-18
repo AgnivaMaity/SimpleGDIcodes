@@ -9,8 +9,6 @@ DWORD WINAPI SetPixelEffect(LPVOID lpParam)
         SetPixel(desk, rand() % x, rand() % y, RGB(rand() % 255, rand() % 255, rand() % 255));
         SetPixel(desk, rand() % x, rand() % y, RGB(rand() % 255, rand() % 255, rand() % 255));
         SetPixel(desk, rand() % x, rand() % y, RGB(rand() % 255, rand() % 255, rand() % 255));
-        ReleaseDC(GetDesktopWindow(), desk); // fkush the DC.
-        DeleteObject(&x); DeleteObject(&y); // prevent memory leaks.
     }
     DeleteDC(desk); //bruh
 }
